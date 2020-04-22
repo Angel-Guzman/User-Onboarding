@@ -16,7 +16,7 @@ const initialFormValues = {
   lastname: '',
   email: '',
   password: '',
-  tos: false
+  tos: false,
 }
 
 const initialFormErrors = {
@@ -24,16 +24,17 @@ const initialFormErrors = {
   lastname: '',
   email: '',
   password: '',
+  tos: false,
 }
 
 const formSchema = yup.object().shape({
   firstname: yup 
   .string()
-  .min(1, 'at least 1 letter for first name is required')
+  .min(2, 'at least 2 letters for first name is required')
   .required('first name is required'),
   lastname: yup 
   .string()
-  .min(1, 'at least 1 letter for last name is required')
+  .min(2, 'at least 2 letters for last name is required')
   .required('last name is required'),
   email: yup 
   .string()
